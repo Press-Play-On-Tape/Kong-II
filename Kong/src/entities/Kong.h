@@ -32,7 +32,7 @@ class Kong {
 
   protected:
 
-    bool chains[4] = {1, 1, 1, 1};  // SJH
+    bool chains[4] = {1, 1, 1, 1};  
     bool flash[4] = {0, 0, 0, 0};
 
     bool exit = false;

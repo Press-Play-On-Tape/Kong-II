@@ -32,8 +32,6 @@ void playGame_ResetLevel(uint8_t introDelay) {
 
 }
 
-
-
 void playGame_RenderScore(uint8_t yOffset) {
     
     if (gameStats.numberOfLivesLeft >= 3) {

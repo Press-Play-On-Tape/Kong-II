@@ -75,7 +75,6 @@ template <typename T> inline T clamp(const T& value, const T& low, const T& high
 }
 
 
-
 // ----------------------------------------------------------------------------
 //  Wrap the range .. 
 //

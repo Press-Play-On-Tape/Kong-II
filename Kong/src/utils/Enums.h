@@ -5,7 +5,7 @@
 #define NO_USB
 #define _DEBUG
 
-// Comment out IGNORE_BARREL_COLLISIONS to include colllision detection ..
+// Comment out IGNORE_COLLISIONS to include colllision detection ..
 #define _IGNORE_COLLISIONS
 #define PLAY_SOUNDS
 
@@ -15,12 +15,8 @@
 #define FRAME_RATE_MIN 67
 #define FRAME_RATE_MAX 90
 
-// #define NUMBER_OF_HOOKS 4
 #define INTRO_DELAY_FROM_TITLE_SCROLL 121
 #define INTRO_DELAY_FROM_TITLE 120
-#define INTRO_DELAY_NORMAL 200
-#define INTRO_MOVE_TO_BOTTOM 100
-
 
 #define NO_IMAGE 255
 
@@ -59,22 +55,6 @@
 #define JUMP_POINT_SPAN 12
 
 
-// - High Scores ---------------------
-
-#define NAME_LENGTH 3
-#define NAME_LENGTH_PLUS_TERM (NAME_LENGTH + 1)
-
-#define HS_NAME_LEFT 36
-#define HS_SCORE_LEFT 69
-#define HS_CHAR_TOP 24
-#define HS_CHAR_V_SPACING 9
-#define HS_PRESS_A_DELAY 125
-#define NO_WINNER 255
-
-#define FLASH_FRAME_COUNT 40
-
-
-
 enum class GameStateType : uint8_t {
 	SplashScreen_Activate,
 	SplashScreen,
@@ -85,7 +65,6 @@ enum class GameStateType : uint8_t {
     HighScore_Activate,
     HighScore,
 };
-
 
 enum class Background : uint8_t {
     None,
@@ -200,7 +179,7 @@ struct GameStats {
         GameStats() { };
 
         uint16_t score = 0;
-        uint8_t numberOfLivesLeft = 4; //SJH
+        uint8_t numberOfLivesLeft = 4; 
         uint8_t level = 1;
 
         GameMode mode = GameMode::Easy;
@@ -209,7 +188,7 @@ struct GameStats {
 
         void resetGame() {
 
-            this->numberOfLivesLeft = 4; //SJH
+            this->numberOfLivesLeft = 4; 
             this->score = 0; 
             this->level = 1;
             this->gameOver = false;

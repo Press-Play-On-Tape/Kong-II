@@ -5,5 +5,3 @@
 #include "Kong.h"
 #include "Player.h"
 #include "Spark.h"
-
-#include "Barrels.h"

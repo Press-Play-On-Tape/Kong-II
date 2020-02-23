@@ -1,3 +1,5 @@
+#include "src/utils/Arduboy2Ext.h"
+
 
 // ----------------------------------------------------------------------------
 //  Render the state .. 
@@ -165,6 +167,9 @@ void playGame_Render() {
 }
 
 
+// ----------------------------------------------------------------------------
+//  Render Kong .. 
+//
 void playGame_RenderKong(uint8_t yOffset) {
 
     int8_t x = playGameVars.kong.getXPosition();
@@ -191,6 +196,9 @@ void playGame_RenderKong(uint8_t yOffset) {
 }
 
 
+// ----------------------------------------------------------------------------
+//  Render key .. 
+//
 void playGame_RenderKey(uint8_t yOffset) {
 
     // Render key ..

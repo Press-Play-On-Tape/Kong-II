@@ -1,27 +1,32 @@
 #pragma once
 
 struct HighScoreStateVars {
+    
     bool newHighScore = false;
     uint8_t clearScores = 0;
     uint8_t counter = 0;
     GameMode selectedMode = GameMode::Easy;
+
 };
 
 struct SplashScreenStateVars {
+
     uint8_t counter = 0;
+
 };
 
 struct TitleScreenStateVars {
+
     uint8_t restart = 0;
     uint8_t counter = 0;
     Rotation position = Rotation::None;
+
 };
 
 struct PlayGameStateVars {
 
     uint8_t introDelay;
     uint8_t preventJumpDelay;   // Used to prevent a jump if the A button is pressed to start game.
-    uint8_t numberOfBarrelsInPlay = 0;
     uint8_t frameRate = FRAME_RATE_MIN;
 
     bool showLivesLeft = true;

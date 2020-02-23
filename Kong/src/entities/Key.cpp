@@ -98,7 +98,7 @@ uint8_t Key::getImage() {
                 return static_cast<uint8_t>(KeyImage::Position_04);
 
             default:    
-                return 0;//pgm_read_byte(&this->path[(this->position * 3) + 2]);
+                return 0;
 
         }
 
