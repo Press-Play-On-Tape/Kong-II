@@ -6,23 +6,23 @@
 
 namespace Coordinates {
 
-  struct PlayerData {
+    struct PlayerData {
 
-    int8_t x;
-    int8_t y;
-    uint8_t yOffset;
-    Stance stance;
-    uint8_t movements;
+        int8_t x;
+        int8_t y;
+        uint8_t yOffset;
+        Stance stance;
+        uint8_t movements;
 
-  };
+    };
 
-  #define PLAYER_POS_LOWERKEY_START 14
-  #define PLAYER_POS_LOWERKEY_END 16
+    #define PLAYER_POS_LOWERKEY_START 14
+    #define PLAYER_POS_LOWERKEY_END 16
 
-  #define PLAYER_POS_UPPERKEY_START 220
-  #define PLAYER_POS_UPPERKEY_END 222
+    #define PLAYER_POS_UPPERKEY_START 220
+    #define PLAYER_POS_UPPERKEY_END 222
 
-  const uint8_t PROGMEM Player[] = {
+    const uint8_t PROGMEM Player[] = {
 
     // 0
     11, 116, 64, static_cast<uint8_t>(Stance::Normal), static_cast<uint8_t>(Movements::Up),
@@ -182,11 +182,11 @@ namespace Coordinates {
     89, 83, 51, static_cast<uint8_t>(Stance::Climbing_Vine_02), static_cast<uint8_t>(Movements::Down) | static_cast<uint8_t>(Movements::Up),
 
     89, 82, 51, static_cast<uint8_t>(Stance::Climbing_Vine_02), static_cast<uint8_t>(Movements::Down) | static_cast<uint8_t>(Movements::Up),
-//    88, 82, 50, static_cast<uint8_t>(Stance::Climbing_Vine_01), static_cast<uint8_t>(Movements::Reverse) | static_cast<uint8_t>(Movements::Down) | static_cast<uint8_t>(Movements::Up),
+    //    88, 82, 50, static_cast<uint8_t>(Stance::Climbing_Vine_01), static_cast<uint8_t>(Movements::Reverse) | static_cast<uint8_t>(Movements::Down) | static_cast<uint8_t>(Movements::Up),
     89, 81, 49, static_cast<uint8_t>(Stance::Normal), static_cast<uint8_t>(Movements::Reverse) | static_cast<uint8_t>(Movements::Down) | static_cast<uint8_t>(Movements::Left) | static_cast<uint8_t>(Movements::Right) | static_cast<uint8_t>(Movements::Jump),
-    
-    
-//    #define PLAYER_SPARK_START 111
+
+
+    //    #define PLAYER_SPARK_START 111
     #define PLAYER_SPARK_START 111
     87, 80, 48, static_cast<uint8_t>(Stance::Normal), static_cast<uint8_t>(Movements::Reverse) | static_cast<uint8_t>(Movements::Down) | static_cast<uint8_t>(Movements::Left) | static_cast<uint8_t>(Movements::Right) | static_cast<uint8_t>(Movements::Jump),
     86, 80, 47, static_cast<uint8_t>(Stance::Normal), static_cast<uint8_t>(Movements::Reverse) | static_cast<uint8_t>(Movements::Down) | static_cast<uint8_t>(Movements::Left) | static_cast<uint8_t>(Movements::Right) | static_cast<uint8_t>(Movements::Jump),
@@ -483,7 +483,7 @@ namespace Coordinates {
 
 
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
+
 
     #define PLAYER_CHAIN_1_BACKTOGROUND     PLAYER_CHAIN_0_END
 
@@ -528,10 +528,10 @@ namespace Coordinates {
     50, 20, 0, static_cast<uint8_t>(Stance::OnRope_01), static_cast<uint8_t>(Movements::Down),
 
     #define PLAYER_CHAIN_1_END              PLAYER_CHAIN_1_CLIMBING + 20
-    
+
 
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
+
 
     #define PLAYER_CHAIN_2_BACKTOGROUND     PLAYER_CHAIN_1_END
 
@@ -576,10 +576,10 @@ namespace Coordinates {
     70, 20, 0, static_cast<uint8_t>(Stance::OnRope_03), static_cast<uint8_t>(Movements::Down),
 
     #define PLAYER_CHAIN_2_END              PLAYER_CHAIN_2_CLIMBING + 20
-    
+
 
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
+
 
     #define PLAYER_CHAIN_3_BACKTOGROUND     PLAYER_CHAIN_2_END
 
@@ -626,7 +626,7 @@ namespace Coordinates {
     90, 20, 0, static_cast<uint8_t>(Stance::OnRope_03), static_cast<uint8_t>(Movements::Down),
 
     #define PLAYER_CHAIN_3_END              PLAYER_CHAIN_3_CLIMBING + 20
-    
+
 
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -811,26 +811,25 @@ namespace Coordinates {
 
     #define PLAYER_CHAIN_MOVE_TO_EXIT_END     PLAYER_CHAIN_MOVE_TO_EXIT_3 + 39
 
-
     0, 0, 0, static_cast<uint8_t>(Stance::Normal), static_cast<uint8_t>(Movements::None),
 
-  };
- 
+    };
 
-  inline void readPlayerData(Coordinates::PlayerData &playerData, uint16_t index) {
 
-    int8_t x = static_cast<int8_t>(pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS)]));
-    int8_t y = pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS) + 1]);
-    uint8_t yOffset = pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS) + 2]);
-    Stance stance = static_cast<Stance>(pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS) + 3]));
-    uint8_t movements = pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS) + 4]);
+    inline void readPlayerData(Coordinates::PlayerData &playerData, uint16_t index) {
 
-    playerData.x = x;
-    playerData.y = y;
-    playerData.yOffset = yOffset;
-    playerData.stance = stance;
-    playerData.movements = movements;
-    
-  } 
+        int8_t x = static_cast<int8_t>(pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS)]));
+        int8_t y = pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS) + 1]);
+        uint8_t yOffset = pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS) + 2]);
+        Stance stance = static_cast<Stance>(pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS) + 3]));
+        uint8_t movements = pgm_read_byte(&Coordinates::Player[(index * PLAYER_NUMBER_OF_ELEMENTS) + 4]);
+
+        playerData.x = x;
+        playerData.y = y;
+        playerData.yOffset = yOffset;
+        playerData.stance = stance;
+        playerData.movements = movements;
+
+    } 
 
 }

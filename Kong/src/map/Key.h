@@ -4,7 +4,7 @@
 
 namespace Coordinates {
 
-  const uint8_t PROGMEM LowerKey[] = {
+    const uint8_t PROGMEM LowerKey[] = {
 
     11, 88, static_cast<uint8_t>(KeyImage::Position_00),
     11, 86, static_cast<uint8_t>(KeyImage::Position_00),
@@ -26,9 +26,9 @@ namespace Coordinates {
 
     0, 0, static_cast<uint8_t>(SparkImage::None),
 
-  };
+    };
 
-  const uint8_t PROGMEM Position_00[] = {
+    const uint8_t PROGMEM Position_00[] = {
 
     11, 34, static_cast<uint8_t>(KeyImage::Position_00),
     11, 34, static_cast<uint8_t>(KeyImage::Position_00),
@@ -85,9 +85,9 @@ namespace Coordinates {
 
     0, 0, static_cast<uint8_t>(KeyLocation::Position_00),
 
-  };
+    };
 
-  const uint8_t PROGMEM Position_01[] = {
+    const uint8_t PROGMEM Position_01[] = {
 
     11, 34, static_cast<uint8_t>(KeyImage::Position_00),
     11, 34, static_cast<uint8_t>(KeyImage::Position_00),
@@ -139,9 +139,9 @@ namespace Coordinates {
     53, 12, static_cast<uint8_t>(KeyImage::Position_03),
 
     0, 0, static_cast<uint8_t>(KeyLocation::Position_01),
-  };
+    };
 
-  const uint8_t PROGMEM Position_02[] = {
+    const uint8_t PROGMEM Position_02[] = {
 
     11, 34, static_cast<uint8_t>(KeyImage::Position_00),
     11, 34, static_cast<uint8_t>(KeyImage::Position_00),
@@ -181,9 +181,9 @@ namespace Coordinates {
     72, 12, static_cast<uint8_t>(KeyImage::Position_03),
 
     0, 0, static_cast<uint8_t>(KeyLocation::Position_02),
-  };
+    };
 
-  const uint8_t PROGMEM Position_03[] = {
+    const uint8_t PROGMEM Position_03[] = {
 
     11, 34, static_cast<uint8_t>(KeyImage::Position_00),
     11, 34, static_cast<uint8_t>(KeyImage::Position_00),
@@ -233,7 +233,8 @@ namespace Coordinates {
     91, 12, static_cast<uint8_t>(KeyImage::Position_03),
 
     0, 0, static_cast<uint8_t>(KeyLocation::Position_03),
-  };
+
+    };
 
     const uint8_t * const PROGMEM Positions[] = { 
     Position_00,

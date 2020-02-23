@@ -4,7 +4,7 @@
 
 namespace Coordinates {
 
-  const uint8_t PROGMEM Kong_Exit[] = {
+    const uint8_t PROGMEM Kong_Exit[] = {
 
     52, 0, static_cast<uint8_t>(KongImage::Falling_00),
     52, 0, static_cast<uint8_t>(KongImage::Falling_00),
@@ -198,6 +198,6 @@ namespace Coordinates {
     130, 42, static_cast<uint8_t>(KongImage::Walking_03),
 
     0, 0, static_cast<uint8_t>(KongImage::Falling_01),
-  };
+    };
 
 }

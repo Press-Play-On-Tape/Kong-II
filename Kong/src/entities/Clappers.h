@@ -6,22 +6,22 @@
 
 class Clappers {
 
-  public:
+    public:
 
-    Clappers();
+        Clappers();
 
-    Clapper & getClapper(uint8_t index);
+        Clapper & getClapper(uint8_t index);
 
-    void updatePositions();
-    void setDelayMax(uint8_t delayMax, bool updateDelay);
-    void launchClapper();
-    void reset(uint8_t y);
-    
-  protected:
+        void updatePositions();
+        void setDelayMax(uint8_t delayMax, bool updateDelay);
+        void launchClapper();
+        void reset(uint8_t y);
 
-    Clapper clappers[4];
-    uint8_t delay;
-    uint8_t delayMax;
+    protected:
+
+        Clapper clappers[4];
+        uint8_t delay;
+        uint8_t delayMax;
 
 };
 

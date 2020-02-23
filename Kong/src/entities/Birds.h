@@ -6,22 +6,22 @@
 
 class Birds {
 
-  public:
+    public:
 
-    Birds();
+        Birds();
 
-    Bird & getBird(uint8_t index);
+        Bird & getBird(uint8_t index);
 
-    void updatePositions();
-    void setDelayMax(uint16_t delayMax, bool updateDelay);
-    void launchBird();
-    void reset();
+        void updatePositions();
+        void setDelayMax(uint16_t delayMax, bool updateDelay);
+        void launchBird();
+        void reset();
 
-  protected:
+    protected:
 
-    Bird birds[4];
-    uint16_t delay;
-    uint16_t delayMax;
+        Bird birds[4];
+        uint16_t delay;
+        uint16_t delayMax;
 
 };
 

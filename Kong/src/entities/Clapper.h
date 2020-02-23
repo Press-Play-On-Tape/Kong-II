@@ -5,31 +5,31 @@
 
 class Clapper {
 
-  public:
+    public:
 
-    Clapper();
- 
-    // Properties ..
+        Clapper();
 
-    int16_t getXPosition();
-    int8_t getYPosition(uint8_t yOffset);
-    uint8_t getImage();
-    bool isEnabled();
+        // Properties ..
 
-    void setEnabled(bool enabled);
-    void setY(uint8_t y);
+        int16_t getXPosition();
+        int8_t getYPosition(uint8_t yOffset);
+        uint8_t getImage();
+        bool isEnabled();
+
+        void setEnabled(bool enabled);
+        void setY(uint8_t y);
 
 
-    // Methods
+        // Methods
 
-    void updatePosition();
-    Rect getRect(uint8_t yOffset, GameMode mode);
-    
-  protected:
+        void updatePosition();
+        Rect getRect(uint8_t yOffset, GameMode mode);
 
-    bool enabled = false;
-    int16_t x;
-    uint8_t y;
+    protected:
+
+        bool enabled = false;
+        int16_t x;
+        uint8_t y;
 
 };
 

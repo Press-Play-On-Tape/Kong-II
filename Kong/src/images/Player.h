@@ -2,7 +2,6 @@
 
 namespace Images {
 
-
     const uint8_t PROGMEM Junior_OnRope_0[] = {
     14, 13,
     0x90, 0x68, 0x94, 0xb4, 0x48, 0x6c, 0x92, 0x35, 0x5d, 0x51, 0x0a, 0x02, 0x04, 0xf8, // R0
@@ -179,25 +178,5 @@ namespace Images {
     Junior_Climbing_0_Mask,
     Junior_Climbing_1_Mask,
     };
-
-
-// enum class Stance : uint8_t {
-//     Normal,                     // 0
-//     Normal_RHS,                 // 1
-//     Running_01,                 // 2
-//     Running_02,                 // 3
-//     Running_01_RHS,             // 4
-//     Running_02_RHS,             // 5
-//     OnRope_01,                  // 6
-//     OnRope_02,                  // 7
-//     OnRope_03,                  // 8
-//     OnRope_04,                  // 9
-//     Climbing_Vine_01,           // 10
-//     Climbing_Vine_02,           // 11
-//     Jump,                       // 12
-//     Falling_01,                 // 13
-//     Falling_02,                 // 14
-// };
-
 
 };

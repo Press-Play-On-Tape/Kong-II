@@ -6,63 +6,63 @@
 
 class Player {
 
-  public:
+    public:
 
-    Player();
- 
- 
-    // Properties ..
-
-    uint16_t getPosition();
-    uint8_t getJumpPosition();
-    int8_t getXPosition(bool updatePrevPosition);
-    int8_t getYPosition();
-    uint8_t getMovements();
-    uint8_t getYOffset();
-    bool isDead();
-    bool isFalling();
-    bool getExit();
-
-    void setPosition(uint16_t position);
-    void setJumpPosition(uint8_t jumpPosition);
-    void setDead(bool dead);
-    void setFalling(bool falling);
-    void setExit(bool dead);
+        Player();
 
 
-    // Methods
+        // Properties ..
 
-    uint8_t getImage();
-    uint8_t getImage(bool update);
+        uint16_t getPosition();
+        uint8_t getJumpPosition();
+        int8_t getXPosition(bool updatePrevPosition);
+        int8_t getYPosition();
+        uint8_t getMovements();
+        uint8_t getYOffset();
+        bool isDead();
+        bool isFalling();
+        bool getExit();
 
-    void incPlayerPosition();
-    void decPlayerPosition(bool exitSequence);
+        void setPosition(uint16_t position);
+        void setJumpPosition(uint8_t jumpPosition);
+        void setDead(bool dead);
+        void setFalling(bool falling);
+        void setExit(bool dead);
 
-    bool canMove(Movements movement);
-    void updateJump();
-    void startJump();
-    bool isJumping();
-    bool atTopOfJump();
-    bool canGrabChain();
-    void reset();
 
-    Rect getRect();
+        // Methods
 
-  protected:
+        uint8_t getImage();
+        uint8_t getImage(bool update);
 
-    uint16_t position;
-    uint8_t jumpPosition;
-    uint8_t movements;
+        void incPlayerPosition();
+        void decPlayerPosition(bool exitSequence);
 
-    int8_t prevXPosition;
-    uint8_t runCounter;
-    uint8_t prevImage;
-    Movements runMovement = Movements::Right;
+        bool canMove(Movements movement);
+        void updateJump();
+        void startJump();
+        bool isJumping();
+        bool atTopOfJump();
+        bool canGrabChain();
+        void reset();
 
-    bool dead = false;
-    bool falling = false;
-    bool exit = false;
-    Coordinates::PlayerData playerData;
+        Rect getRect();
+
+    protected:
+
+        uint16_t position;
+        uint8_t jumpPosition;
+        uint8_t movements;
+
+        int8_t prevXPosition;
+        uint8_t runCounter;
+        uint8_t prevImage;
+        Movements runMovement = Movements::Right;
+
+        bool dead = false;
+        bool falling = false;
+        bool exit = false;
+        Coordinates::PlayerData playerData;
 
 };
 

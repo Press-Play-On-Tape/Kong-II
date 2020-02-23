@@ -6,39 +6,39 @@
 
 class Kong {
 
-  public:
+    public:
 
-    Kong();
- 
-    KongImage getImage();
-    int8_t getXPosition();
-    int8_t getYPosition(uint8_t yOffset);
-    bool getChain(uint8_t index);
-    bool getFlashChain(uint8_t index);
-    bool getExit();
-    bool getEnabled();
+        Kong();
 
-    bool isEnabled();
-    void setChain(uint8_t index, bool value);
-    void setFlashChain(uint8_t index, bool value);
-    void setChains(bool value);
-    void setExit(bool value);
-    void setEnabled(bool value);
-    
-    bool updateChains();                    // Returns true if all 4 chains gone.
-    bool updatePosition();                  // Returns tru if exit sequence is complete.
-    bool getDisplayChain(uint8_t index);
-    void reset();
+        KongImage getImage();
+        int8_t getXPosition();
+        int8_t getYPosition(uint8_t yOffset);
+        bool getChain(uint8_t index);
+        bool getFlashChain(uint8_t index);
+        bool getExit();
+        bool getEnabled();
 
-  protected:
+        bool isEnabled();
+        void setChain(uint8_t index, bool value);
+        void setFlashChain(uint8_t index, bool value);
+        void setChains(bool value);
+        void setExit(bool value);
+        void setEnabled(bool value);
 
-    bool chains[4] = {1, 1, 1, 1};  
-    bool flash[4] = {0, 0, 0, 0};
+        bool updateChains();                    // Returns true if all 4 chains gone.
+        bool updatePosition();                  // Returns tru if exit sequence is complete.
+        bool getDisplayChain(uint8_t index);
+        void reset();
 
-    bool exit = false;
-    bool enabled = false;
-    uint8_t counter = 0;
-    uint8_t position = 0;
+    protected:
+
+        bool chains[4] = {1, 1, 1, 1};  
+        bool flash[4] = {0, 0, 0, 0};
+
+        bool exit = false;
+        bool enabled = false;
+        uint8_t counter = 0;
+        uint8_t position = 0;
 
 };
 

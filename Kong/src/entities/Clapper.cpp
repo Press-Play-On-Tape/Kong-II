@@ -6,38 +6,38 @@ Clapper::Clapper() { }
 
 int16_t Clapper::getXPosition() {
 
-  return this->x;
+    return this->x;
 
 }
 
 int8_t Clapper::getYPosition(uint8_t yOffset) {
 
-  return this->y - yOffset;
+    return this->y - yOffset;
 
 }
 
 uint8_t Clapper::getImage() {
 
-  return (this->x % 8 < 4 ? 1 : 0);
+    return (this->x % 8 < 4 ? 1 : 0);
 
 }
 
 bool Clapper::isEnabled() {
 
-  return this->enabled;
+    return this->enabled;
 
 }
 
 void Clapper::setEnabled(bool enabled) {
 
-  this->enabled = enabled;
-  this->x = 128;
+    this->enabled = enabled;
+    this->x = 128;
 
 }
 
 void Clapper::setY(uint8_t y) {
 
-  this->y = y;
+    this->y = y;
 
 }
 

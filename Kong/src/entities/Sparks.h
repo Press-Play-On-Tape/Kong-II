@@ -6,22 +6,22 @@
 
 class Sparks {
 
-  public:
+    public:
 
-    Sparks();
+        Sparks();
 
-    Spark & getSpark(uint8_t index);
+        Spark & getSpark(uint8_t index);
 
-    void updatePositions();
-    void setDelayMax(uint8_t delayMax, bool updateDelay);
-    void launchSpark();
-    void reset(uint8_t const *path);
+        void updatePositions();
+        void setDelayMax(uint8_t delayMax, bool updateDelay);
+        void launchSpark();
+        void reset(uint8_t const *path);
 
-  protected:
+    protected:
 
-    Spark sparks[4];
-    uint8_t delay;
-    uint8_t delayMax;
+        Spark sparks[4];
+        uint8_t delay;
+        uint8_t delayMax;
 
 };
 

@@ -6,34 +6,34 @@
 
 class Spark {
 
-  public:
+    public:
 
-    Spark();
- 
-    // Properties ..
+        Spark();
 
-    uint8_t getPosition();
-    int8_t getXPosition();
-    int8_t getYPosition(uint8_t yOffset);
-    uint8_t getImage();
-    bool isEnabled();
+        // Properties ..
 
-    void setPosition(uint8_t position);
-    void setEnabled(bool enabled);
-    void setPath(uint8_t const *path);
+        uint8_t getPosition();
+        int8_t getXPosition();
+        int8_t getYPosition(uint8_t yOffset);
+        uint8_t getImage();
+        bool isEnabled();
+
+        void setPosition(uint8_t position);
+        void setEnabled(bool enabled);
+        void setPath(uint8_t const *path);
 
 
-    // Methods
+        // Methods
 
-    void updatePosition();
-    Rect getRect(uint8_t yOffset, GameMode mode);
-    
-  protected:
+        void updatePosition();
+        Rect getRect(uint8_t yOffset, GameMode mode);
 
-    bool enabled = false;
-    uint8_t position = 0;
-    uint8_t counter = 0;
-    uint8_t const *path = nullptr; 
+    protected:
+
+        bool enabled = false;
+        uint8_t position = 0;
+        uint8_t counter = 0;
+        uint8_t const *path = nullptr; 
 
 };
 
