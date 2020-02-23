@@ -4,7 +4,7 @@
 
 namespace Coordinates {
 
-  const uint8_t PROGMEM LowerSpark[] = {
+    const uint8_t PROGMEM LowerSpark[] = {
 
     4, 82, static_cast<uint8_t>(SparkImage::Left),
     4, 82, static_cast<uint8_t>(SparkImage::Left),
@@ -243,10 +243,10 @@ namespace Coordinates {
 
     0, 0, static_cast<uint8_t>(SparkImage::None),
 
-  };
+    };
 
 
-  const uint8_t PROGMEM UpperSpark[] = {
+    const uint8_t PROGMEM UpperSpark[] = {
 
     108, 65, static_cast<uint8_t>(SparkImage::Left),
     108, 65, static_cast<uint8_t>(SparkImage::Left),
@@ -397,7 +397,7 @@ namespace Coordinates {
     26, 65, static_cast<uint8_t>(SparkImage::Right),
     25, 65, static_cast<uint8_t>(SparkImage::Left),
     24, 65, static_cast<uint8_t>(SparkImage::Right),
-    
+
     23, 65, static_cast<uint8_t>(SparkImage::Left),
     22, 65, static_cast<uint8_t>(SparkImage::Right),
     21, 65, static_cast<uint8_t>(SparkImage::Left),
@@ -452,7 +452,6 @@ namespace Coordinates {
 
     0, 0, static_cast<uint8_t>(SparkImage::None),
 
-  };
-
+    };
 
 }	
