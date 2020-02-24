@@ -13,15 +13,15 @@ class Sparks {
         Spark & getSpark(uint8_t index);
 
         void updatePositions();
-        void setDelayMax(uint8_t delayMax, bool updateDelay);
+        void setDelayMax(uint16_t delayMax, bool updateDelay);
         void launchSpark();
         void reset(uint8_t const *path);
 
     protected:
 
         Spark sparks[4];
-        uint8_t delay;
-        uint8_t delayMax;
+        uint16_t delay;
+        uint16_t delayMax;
 
 };
 

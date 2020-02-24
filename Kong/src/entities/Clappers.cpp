@@ -35,7 +35,7 @@ void Clappers::updatePositions() {
 }
 
 
-void Clappers::setDelayMax(uint8_t delayMax, bool updateDelay) {
+void Clappers::setDelayMax(uint16_t delayMax, bool updateDelay) {
 
     if (updateDelay) this->delay = random(0, delayMax / 2);
     this->delayMax = delayMax;
