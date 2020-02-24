@@ -2,12 +2,12 @@
 
 #include "Arduboy2Ext.h"
 
-#define NO_USB
-#define _DEBUG
+#define _NO_USB
+#define DEBUG
 
 // Comment out IGNORE_COLLISIONS to include colllision detection ..
-#define _IGNORE_COLLISIONS
-#define PLAY_SOUNDS
+#define IGNORE_COLLISIONS
+#define _PLAY_SOUNDS
 
 
 // - Game play stuff ---------------------

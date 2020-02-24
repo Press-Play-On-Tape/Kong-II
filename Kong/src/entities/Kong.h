@@ -32,8 +32,8 @@ class Kong {
 
     protected:
 
-        bool chains[4] = {1, 1, 1, 1};  
-        bool flash[4] = {0, 0, 0, 0};
+        bool chains[4] = { true, true, true, true };  
+        bool flash[4] = { false, false, false, false };
 
         bool exit = false;
         bool enabled = false;
