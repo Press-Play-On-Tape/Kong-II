@@ -280,6 +280,7 @@ void playGame_Update() {
             if (playGameVars.playing && arduboy.everyXFrames(2)) {
 
                 playGameVars.key.updatePosition();
+                playGameVars.kong.updateChains();
 
                 uint16_t position = playGameVars.player.getPosition();
 
@@ -305,9 +306,9 @@ void playGame_Update() {
                 bool exitComplete = playGameVars.kong.updatePosition();
 
                 if (exitComplete) {
-
+// Serial.println("activate excom");
+                    playGameVars.kong.reset();
                     playGameVars.player.setPosition(0);
-                    playGameVars.kong.setEnabled(true);
                     playGameVars.exitSequence = false;
 
                     playGame_ScrollToBottom(false);

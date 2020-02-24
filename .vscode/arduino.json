@@ -1,5 +1,5 @@
 {
     "board": "arduino:avr:leonardo",
-    "sketch": "Kong\\Kong.ino",
+    "sketch": "Kong\\KongII.ino",
     "output": "C:\\temp\\build"
 }
