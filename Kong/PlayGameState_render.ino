@@ -18,7 +18,7 @@ void playGame_Render() {
 
     if (!gameStats.gameOver) {
 
-        if (/*playGameVars.playing || */ playGameVars.introDelay == 0) {
+        if (playGameVars.introDelay == 0) {
 
             uint8_t stance = playGameVars.player.getImage();
             int8_t x = playGameVars.player.getXPosition(false);
@@ -146,18 +146,7 @@ void playGame_Render() {
 
 
     playGame_RenderKey(yOffset);
-
-    if (!gameStats.gameOver && playGameVars.showLivesLeft) {
-
-        uint8_t digits[3] = {};
-        extractDigits(digits, gameStats.score);
-
-    }
-    else {
-
-        playGame_RenderGameOverOrPause();
-
-    }
+    playGame_RenderGameOverOrPause();
 
 
     // Render score ..

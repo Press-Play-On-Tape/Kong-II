@@ -447,8 +447,8 @@ void playGame_Update() {
     switch (playGameVars.introDelay) {
 
         case INTRO_DELAY_FROM_TITLE_SCROLL:
+
             playGame_ScrollToBottom(true);
-            playGameVars.showLivesLeft = true;
 
             if (playGameVars.clappersLowerDelay > CLAPPERS_LOWER_MIN) {
 
@@ -490,17 +490,12 @@ void playGame_Update() {
             
             break;
 
-        case INTRO_DELAY_FROM_TITLE:
-            playGameVars.showLivesLeft = true;
-            break;
-
         case 1:
             if (gameStats.numberOfLivesLeft > 0) {
                 playGameVars.player.reset();
                 playGameVars.playing = true;
                 gameStats.numberOfLivesLeft--;
             }
-            playGameVars.showLivesLeft = false;
             break;
 
         default:
@@ -520,7 +515,6 @@ void playGame_Update() {
         if (playGameVars.introDelay < 100 && ((justPressed & A_BUTTON) || (justPressed & B_BUTTON))) {
 
             playGameVars.playing = true;
-            playGameVars.showLivesLeft = false;
             playGameVars.introDelay = 0;
             playGameVars.player.reset();
             gameStats.numberOfLivesLeft--;

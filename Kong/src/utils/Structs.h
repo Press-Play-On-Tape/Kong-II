@@ -29,7 +29,6 @@ struct PlayGameStateVars {
     uint8_t preventJumpDelay;   // Used to prevent a jump if the A button is pressed to start game.
     uint8_t frameRate = FRAME_RATE_MIN;
 
-    bool showLivesLeft = true;
     bool exitSequence = false;
     
     bool playing = false;

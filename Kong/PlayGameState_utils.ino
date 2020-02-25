@@ -19,7 +19,6 @@ void playGame_KillPlayer() {
     playGameVars.player.setDead(true);
     playGameVars.playing = false;
     playGameVars.introDelay = INTRO_DELAY_FROM_TITLE;
-    playGameVars.showLivesLeft = false;
     playGameVars.key.setKeyLocation(KeyLocation::LowerPosition);
 
 }
@@ -27,7 +26,6 @@ void playGame_KillPlayer() {
 void playGame_ResetLevel(uint8_t introDelay) {
 
     playGameVars.introDelay = introDelay;
-    playGameVars.showLivesLeft = false;
     playGameVars.playing = false;
 
 }
