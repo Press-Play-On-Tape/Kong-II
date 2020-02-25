@@ -88,7 +88,7 @@ void Kong::setEnabled(bool enabled) {
 }
 
 void Kong::setChain(uint8_t index, bool value) {
-// Serial.println("kong.setChain()");
+
     this->chains[index] = value;
 
 }
@@ -101,7 +101,7 @@ void Kong::setFlashChain(uint8_t index, bool value) {
 }
 
 void Kong::setChains(bool value) {
-// Serial.println("kong.setChains()");
+
     for (uint8_t x =  0; x < NUMBER_OF_CHAINS; x++) {
         this->chains[x] = value;
     }
@@ -133,9 +133,7 @@ bool Kong::updateChains() {
                 }
 
                 if (this->flash[x]) {
-// Serial.print("kong.updateChains(");
-// Serial.print(x);
-// Serial.println(") = false");
+
                     this->chains[x] = false;
                     this->flash[x] = false;
                     count++;
@@ -174,7 +172,7 @@ bool Kong::updatePosition() {
         this->position = 0;
 
         for (uint8_t x = 0; x < NUMBER_OF_CHAINS; x++) {
-// Serial.println("kong.updatePosition()");
+
             this->chains[x] = true;
 
         }

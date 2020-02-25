@@ -374,8 +374,25 @@ Rect Player::getRect() {
         case Stance::Running_01 ... Stance::Running_02_RHS:
             return Rect {this->playerData.x + 1, y + 1, 16, 10};
 
-        case Stance::OnRope_01 ... Stance::OnRope_04:
-            return Rect {this->playerData.x + 1, y + 1, 12, 11};
+        // case Stance::OnRope_01 ... Stance::OnRope_04:
+        //     return Rect {this->playerData.x + 1, y + 1, 12, 11};
+
+        case Stance::OnRope_01:
+            //return this->playerData.x + 7;
+            return Rect {this->playerData.x + 8, y + 1, 12, 11};
+
+        case Stance::OnRope_02:
+            //return this->playerData.x + 6;
+            return Rect {this->playerData.x + 7, y + 1, 12, 11};
+
+        case Stance::OnRope_03:
+            //return this->playerData.x - 2;
+            return Rect {this->playerData.x - 1, y + 1, 12, 11};
+
+        case Stance::OnRope_04:
+            //return this->playerData.x - 3;
+            return Rect {this->playerData.x - 2, y + 1, 12, 11};
+
 
         case Stance::Falling_01 ... Stance::Falling_02:
             return Rect {this->playerData.x + 1, y + 1, 16, 10};

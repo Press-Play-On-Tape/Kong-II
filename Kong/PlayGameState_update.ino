@@ -10,23 +10,6 @@ void playGame_Update() {
 
     if (!playGame_GetPaused() && !playGameVars.player.isDead()) {
 
-#ifdef DEBUG
-// Serial.print("Player pos :");
-// Serial.print(playGameVars.player.getPosition());
-// Serial.print(" x");
-// Serial.print(playGameVars.player.getXPosition(false));
-// Serial.print(",y ");
-// Serial.print(playGameVars.player.getYPosition());
-// Serial.print(",END ");
-// Serial.print(PLAYER_CHAIN_0_END);
-// Serial.print(",EXIT_s ");
-// Serial.print(PLAYER_CHAIN_MOVE_TO_EXIT_0);
-// Serial.print(",EXIT_e ");
-// Serial.print(PLAYER_CHAIN_0_END);
-// Serial.print(",EXIT_0 ");
-// Serial.println(PLAYER_CHAIN_MOVE_TO_EXIT_0);
-
-#endif
 
         // Handle player movements ..
 
@@ -306,7 +289,7 @@ void playGame_Update() {
                 bool exitComplete = playGameVars.kong.updatePosition();
 
                 if (exitComplete) {
-// Serial.println("activate excom");
+
                     playGameVars.kong.reset();
                     playGameVars.player.setPosition(0);
                     playGameVars.exitSequence = false;
@@ -372,7 +355,6 @@ void playGame_Update() {
                     if (arduboy.collide(playerRect, clapperRect)) {
 
                         playGame_KillPlayer();
-                        //Serial.println("lowerClapper");
 
                     }
 
@@ -387,7 +369,6 @@ void playGame_Update() {
                     if (arduboy.collide(playerRect, clapperRect)) {
 
                         playGame_KillPlayer();
-                        //Serial.println("upperClapper");
                         
                     }
 
@@ -433,23 +414,6 @@ void playGame_Update() {
                     Rect birdRect = bird.getRect(yOffset, gameStats.mode);
 
                     if (arduboy.collide(playerRect, birdRect)) {
-
-// Serial.print("bird ");
-// Serial.print(birdRect.x);
-// Serial.print(",");
-// Serial.print(birdRect.y);
-// Serial.print(",");
-// Serial.print(birdRect.width);
-// Serial.print(",");
-// Serial.print(birdRect.height);
-// Serial.print(" player ");
-// Serial.print(playerRect.x);
-// Serial.print(",");
-// Serial.print(playerRect.y);
-// Serial.print(",");
-// Serial.print(playerRect.width);
-// Serial.print(",");
-// Serial.println(playerRect.height);
 
                         playGame_KillPlayer();
                         
