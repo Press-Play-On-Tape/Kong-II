@@ -46,7 +46,7 @@ void playGame_RenderScore(uint8_t yOffset) {
     extractDigits(digits, gameStats.score);
 
     Sprites::drawErase(81, 118 - yOffset, Images::Game_Icon_Mask, 0);
-    Sprites::drawSelfMasked(81, 118 - yOffset, Images::Game_Icon, 0);
+    Sprites::drawSelfMasked(81, 118 - yOffset, Images::Game_Icon, gameStats.mode == GameMode::Hard);
 
     for (uint8_t j = 4; j > 0; --j) {
 

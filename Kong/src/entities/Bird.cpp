@@ -93,10 +93,10 @@ Rect Bird::getRect(uint8_t yOffset, GameMode mode) {
         case BirdImage::Bird_01:
         case BirdImage::Bird_03:
             if (mode == GameMode::Easy) {
-                return Rect{x + 1, y + 3, 10, 4 };
+                return Rect{x + 2, y + 4, 8, 2 };
             }
             else {
-                return Rect{x + 2, y + 4, 8, 2 };
+                return Rect{x + 1, y + 3, 10, 4 };
             }
 
         case BirdImage::Bird_Turn_00:

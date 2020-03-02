@@ -7,7 +7,7 @@
 #include "src/images/Images.h"
 #include "src/sounds/Sounds.h"
 #include "src/utils/Structs.h"
-#include <ArduboyTones.h>
+#include "src/arduboyNewTones/ArduboyNewTones.h"
 
 #ifdef NO_USB
 ARDUBOY_NO_USB 

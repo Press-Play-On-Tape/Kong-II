@@ -290,6 +290,7 @@ void playGame_Update() {
 
                 if (exitComplete) {
 
+                    gameStats.score = gameStats.score + 20;
                     playGameVars.kong.reset();
                     playGameVars.player.setPosition(0);
                     playGameVars.exitSequence = false;
