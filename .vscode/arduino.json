@@ -1,5 +1,6 @@
 {
-    "board": "arduino:avr:leonardo",
+    "board": "arduboy-homemade:avr:arduboy-homemade",
     "sketch": "Kong/KongII.ino",
-    "output": "C:\\temp\\build"
+    "output": "C:\\temp\\build",
+    "configuration": "based_on=leonardo,boot=org,core=arduboy-core,display=sh1106,flashselect=sda,contrast=normal"
 }

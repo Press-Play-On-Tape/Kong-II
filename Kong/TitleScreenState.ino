@@ -12,7 +12,7 @@ void titleScreen_Activate() {
     playGameVars.frameRate = FRAME_RATE_MIN;
     arduboy.setFrameRate(playGameVars.frameRate);
 
-    titleScreenVars.restart = 0;
+    // titleScreenVars.restart = 0;
     titleScreenVars.counter = 0;
     titleScreenVars.position = Rotation::None;
 
@@ -34,19 +34,19 @@ void titleScreen_Update() {
 
     // Restart ?
 
-    if (pressed & DOWN_BUTTON) {
+    // if (pressed & DOWN_BUTTON) {
 
-        if (titleScreenVars.restart < UPLOAD_DELAY) {
-            titleScreenVars.restart++;
-        }
-        else {
-            arduboy.exitToBootloader();
-        }
+    //     if (titleScreenVars.restart < UPLOAD_DELAY) {
+    //         titleScreenVars.restart++;
+    //     }
+    //     else {
+    //         arduboy.exitToBootloader();
+    //     }
 
-    }
-    else {
-        titleScreenVars.restart = 0;
-    }
+    // }
+    // else {
+    //     titleScreenVars.restart = 0;
+    // }
 
 
     // Handle other input ..

@@ -17,7 +17,7 @@ struct SplashScreenStateVars {
 
 struct TitleScreenStateVars {
 
-    uint8_t restart = 0;
+    // uint8_t restart = 0;
     uint8_t counter = 0;
     Rotation position = Rotation::None;
 

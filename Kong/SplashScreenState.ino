@@ -18,7 +18,7 @@ void splashScreen_Update() {
 
     if (justPressed > 0 && splashScreenVars.counter > 0) {
 
-    splashScreenVars.counter = 32;  
+        splashScreenVars.counter = 20;  
 
     }
 
@@ -37,7 +37,7 @@ void splashScreen_Update() {
 
         splashScreenVars.counter++;
 
-        if (splashScreenVars.counter == 33) gameState = GameStateType::TitleScreen_Activate; 
+        if (splashScreenVars.counter == 21) gameState = GameStateType::TitleScreen_Activate; 
 
     }
 
