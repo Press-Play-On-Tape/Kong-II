@@ -165,8 +165,7 @@ void playGame_RenderKong(uint8_t yOffset) {
     int8_t y = playGameVars.kong.getYPosition(yOffset);
     KongImage image = playGameVars.kong.getImage();
 
-    Sprites::drawErase(x, y, pgm_read_word_near(&Images::Kong_Mask[static_cast<uint8_t>(image)]), 0);
-    Sprites::drawSelfMasked(x, y, pgm_read_word_near(&Images::Kong[static_cast<uint8_t>(image)]), 0);
+    Sprites::drawPlusMask(x, y, pgm_read_word_near(&Images::Kong[static_cast<uint8_t>(image)]), 0);
     
     const uint8_t xPos[] = { 30, 47, 76, 83 };
     const uint8_t yPos[] = { 6, 11, 11, 6 };
