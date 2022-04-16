@@ -173,10 +173,7 @@ void playGame_RenderKong(uint8_t yOffset) {
     for (uint8_t i = 0; i < 4 ; i++) {
 
         if (playGameVars.kong.getDisplayChain(i)) {
-
-            Sprites::drawErase(xPos[i], yPos[i] - yOffset, pgm_read_word_near(&Images::Lock_Chains_Mask[i]), 0);
-            Sprites::drawSelfMasked(xPos[i], yPos[i] - yOffset, pgm_read_word_near(&Images::Lock_Chains[i]), 0);
-
+            Sprites::drawPlusMask(xPos[i], yPos[i] - yOffset, pgm_read_word_near(&Images::Lock_Chains[i]), 0);
         }
 
     }
