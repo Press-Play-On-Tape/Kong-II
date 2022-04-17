@@ -33,13 +33,11 @@ void playGame_ResetLevel(uint8_t introDelay) {
 void playGame_RenderScore(uint8_t yOffset) {
     
     if (gameStats.numberOfLivesLeft >= 3) {
-        Sprites::drawErase(27, 118 - yOffset, Images::Junior_Walking_L_1_Mask, 0);
-        Sprites::drawSelfMasked(27, 118 - yOffset, Images::Junior_Walking_L_1, 0);
+        Sprites::drawPlusMask(27, 118 - yOffset, Images::Junior_Walking_L_1, 0);
     }
 
     if (gameStats.numberOfLivesLeft >= 2) {
-        Sprites::drawErase(44, 118 - yOffset, Images::Junior_Walking_L_1_Mask, 0);
-        Sprites::drawSelfMasked(44, 118 - yOffset, Images::Junior_Walking_L_1, 0);
+        Sprites::drawPlusMask(44, 118 - yOffset, Images::Junior_Walking_L_1, 0);
     }
 
     uint8_t digits[4] = {};

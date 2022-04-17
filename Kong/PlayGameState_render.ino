@@ -24,8 +24,7 @@ void playGame_Render() {
             int8_t x = playGameVars.player.getXPosition(false);
             int8_t y = playGameVars.player.getYPosition();
 
-            Sprites::drawErase(x, y, pgm_read_word_near(&Images::Junior_Mask[stance]), 0);
-            Sprites::drawSelfMasked(x, y, pgm_read_word_near(&Images::Junior[stance]), 0);
+            Sprites::drawPlusMask(x, y, pgm_read_word_near(&Images::Junior[stance]), 0);
 
         }
         else {
@@ -38,15 +37,11 @@ void playGame_Render() {
                 if (playGameVars.player.isDead()) {
 
                     uint8_t stance = playGameVars.player.getImage();
-                    Sprites::drawErase(x, y, pgm_read_word_near(&Images::Junior_Mask[stance]), 0);
-                    Sprites::drawSelfMasked(x, y, pgm_read_word_near(&Images::Junior[stance]), 0);
+                    Sprites::drawPlusMask(x, y, pgm_read_word_near(&Images::Junior[stance]), 0);
 
                 }
                 else {
-
-                    Sprites::drawErase(x, y, Images::Junior_Idle_R_Mask, 0);
-                    Sprites::drawSelfMasked(x, y, Images::Junior_Idle_R, 0);
-
+                    Sprites::drawPlusMask(x, y, Images::Junior_Idle_R, 0);
                 }
 
             }
@@ -104,8 +99,7 @@ void playGame_Render() {
             uint8_t index = lowerSpark.getImage();
 
             if (static_cast<SparkImage>(index) != SparkImage::None) {
-                Sprites::drawErase(x, y, Images::Spark_Mask, index);
-                Sprites::drawSelfMasked(x, y, Images::Spark, index);
+                Sprites::drawPlusMask(x, y, Images::Spark, index);
             }
 
         }
@@ -119,8 +113,7 @@ void playGame_Render() {
             uint8_t index = upperSpark.getImage();
 
             if (static_cast<SparkImage>(index) != SparkImage::None) {
-                Sprites::drawErase(x, y, Images::Spark_Mask, index);
-                Sprites::drawSelfMasked(x, y, Images::Spark, index);
+                Sprites::drawPlusMask(x, y, Images::Spark, index);
             }
 
         }
