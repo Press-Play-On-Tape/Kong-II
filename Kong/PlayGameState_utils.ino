@@ -4,7 +4,7 @@ void playGame_DrawScenery(uint8_t yOffset) {
 
     for (uint8_t i = 0; i < 16; i++) {
 
-        Sprites::drawSelfMasked(0, (i * 8) - yOffset, Images::Background, i);
+        Sprites::drawOverwrite(2, (i * 8) - yOffset, Images::Background, i);
 
     }
 
@@ -43,8 +43,7 @@ void playGame_RenderScore(uint8_t yOffset) {
     uint8_t digits[4] = {};
     extractDigits(digits, gameStats.score);
 
-    Sprites::drawErase(81, 118 - yOffset, Images::Game_Icon_Mask, 0);
-    Sprites::drawSelfMasked(81, 118 - yOffset, Images::Game_Icon, gameStats.mode == GameMode::Hard);
+    Sprites::drawExternalMask(81, 118 - yOffset, Images::Game_Icon, Images::Game_Icon_Mask, gameStats.mode == GameMode::Hard, 0);
 
     for (uint8_t j = 4; j > 0; --j) {
 

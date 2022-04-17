@@ -72,8 +72,7 @@ void playGame_Render() {
             int8_t y = lowerClapper.getYPosition(yOffset);
             uint8_t index = lowerClapper.getImage();
 
-            Sprites::drawErase(x, y, Images::Clappers_Mask, index);
-            Sprites::drawSelfMasked(x, y, Images::Clappers, index);
+            Sprites::drawPlusMask(x, y, Images::Clappers, index);
 
         }
 
@@ -85,8 +84,7 @@ void playGame_Render() {
             int8_t y = upperClapper.getYPosition(yOffset);
             uint8_t index = upperClapper.getImage();
 
-            Sprites::drawErase(x, y, Images::Clappers_Mask, index);
-            Sprites::drawSelfMasked(x, y, Images::Clappers, index);
+            Sprites::drawPlusMask(x, y, Images::Clappers, index);
 
         }
 
