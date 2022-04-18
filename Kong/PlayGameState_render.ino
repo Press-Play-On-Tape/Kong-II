@@ -187,15 +187,13 @@ void playGame_RenderKey(uint8_t yOffset) {
         if (index == NO_IMAGE) {
 
             index = arduboy.getFrameCount() % 59 / 15;
-            Sprites::drawErase(x, y, Images::Key_Spin_Mask, index);
-            Sprites::drawSelfMasked(x, y, Images::Key_Spin, index);
+            Sprites::drawPlusMask(x, y, Images::Key_Spin, index);
 
         }
         else {
 
             if (playGameVars.key.getDisplay()) {
-                Sprites::drawErase(x, y, Images::Key_Rotate_Mask, index);
-                Sprites::drawSelfMasked(x, y, Images::Key_Rotate, index);
+                Sprites::drawPlusMask(x, y, Images::Key_Rotate, index);
             }
 
         }

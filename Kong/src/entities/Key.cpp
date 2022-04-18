@@ -17,10 +17,10 @@ int8_t Key::getXPosition() {
         switch (this->keyLocation) {
 
             case KeyLocation::LowerPosition:
-                return 11;
+                return 13;
 
             case KeyLocation::UpperPosition:
-                return 12;
+                return 14;
 
             case KeyLocation::Position_00:
                 return 34;
