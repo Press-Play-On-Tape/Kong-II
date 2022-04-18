@@ -126,8 +126,7 @@ void playGame_Render() {
 
             if (static_cast<BirdImage>(index) != BirdImage::None) {
 
-                Sprites::drawErase(x, y, pgm_read_word_near(&Images::Birds_Mask[index]), 0);
-                Sprites::drawSelfMasked(x, y, pgm_read_word_near(&Images::Birds[index]), 0);
+                Sprites::drawPlusMask(x, y, pgm_read_word_near(&Images::Birds[index]), 0);
 
             }
 
