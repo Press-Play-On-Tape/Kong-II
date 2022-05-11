@@ -4,7 +4,7 @@ void playGame_DrawScenery(uint8_t yOffset) {
 
     for (uint8_t i = 0; i < 16; i++) {
 
-        Sprites::drawSelfMasked(0, (i * 8) - yOffset, Images::Background, i);
+        Sprites::drawOverwrite(2, (i * 8) - yOffset, Images::Background, i);
 
     }
 
@@ -33,20 +33,17 @@ void playGame_ResetLevel(uint8_t introDelay) {
 void playGame_RenderScore(uint8_t yOffset) {
     
     if (gameStats.numberOfLivesLeft >= 3) {
-        Sprites::drawErase(27, 118 - yOffset, Images::Junior_Walking_L_1_Mask, 0);
-        Sprites::drawSelfMasked(27, 118 - yOffset, Images::Junior_Walking_L_1, 0);
+        Sprites::drawPlusMask(27, 118 - yOffset, Images::Junior_Walking_L_1, 0);
     }
 
     if (gameStats.numberOfLivesLeft >= 2) {
-        Sprites::drawErase(44, 118 - yOffset, Images::Junior_Walking_L_1_Mask, 0);
-        Sprites::drawSelfMasked(44, 118 - yOffset, Images::Junior_Walking_L_1, 0);
+        Sprites::drawPlusMask(44, 118 - yOffset, Images::Junior_Walking_L_1, 0);
     }
 
     uint8_t digits[4] = {};
     extractDigits(digits, gameStats.score);
 
-    Sprites::drawErase(81, 118 - yOffset, Images::Game_Icon_Mask, 0);
-    Sprites::drawSelfMasked(81, 118 - yOffset, Images::Game_Icon, gameStats.mode == GameMode::Hard);
+    Sprites::drawExternalMask(81, 118 - yOffset, Images::Game_Icon, Images::Game_Icon_Mask, gameStats.mode == GameMode::Hard, 0);
 
     for (uint8_t j = 4; j > 0; --j) {
 

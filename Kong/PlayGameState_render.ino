@@ -24,8 +24,7 @@ void playGame_Render() {
             int8_t x = playGameVars.player.getXPosition(false);
             int8_t y = playGameVars.player.getYPosition();
 
-            Sprites::drawErase(x, y, pgm_read_word_near(&Images::Junior_Mask[stance]), 0);
-            Sprites::drawSelfMasked(x, y, pgm_read_word_near(&Images::Junior[stance]), 0);
+            Sprites::drawPlusMask(x, y, pgm_read_word_near(&Images::Junior[stance]), 0);
 
         }
         else {
@@ -38,15 +37,11 @@ void playGame_Render() {
                 if (playGameVars.player.isDead()) {
 
                     uint8_t stance = playGameVars.player.getImage();
-                    Sprites::drawErase(x, y, pgm_read_word_near(&Images::Junior_Mask[stance]), 0);
-                    Sprites::drawSelfMasked(x, y, pgm_read_word_near(&Images::Junior[stance]), 0);
+                    Sprites::drawPlusMask(x, y, pgm_read_word_near(&Images::Junior[stance]), 0);
 
                 }
                 else {
-
-                    Sprites::drawErase(x, y, Images::Junior_Idle_R_Mask, 0);
-                    Sprites::drawSelfMasked(x, y, Images::Junior_Idle_R, 0);
-
+                    Sprites::drawPlusMask(x, y, Images::Junior_Idle_R, 0);
                 }
 
             }
@@ -77,8 +72,7 @@ void playGame_Render() {
             int8_t y = lowerClapper.getYPosition(yOffset);
             uint8_t index = lowerClapper.getImage();
 
-            Sprites::drawErase(x, y, Images::Clappers_Mask, index);
-            Sprites::drawSelfMasked(x, y, Images::Clappers, index);
+            Sprites::drawPlusMask(x, y, Images::Clappers, index);
 
         }
 
@@ -90,8 +84,7 @@ void playGame_Render() {
             int8_t y = upperClapper.getYPosition(yOffset);
             uint8_t index = upperClapper.getImage();
 
-            Sprites::drawErase(x, y, Images::Clappers_Mask, index);
-            Sprites::drawSelfMasked(x, y, Images::Clappers, index);
+            Sprites::drawPlusMask(x, y, Images::Clappers, index);
 
         }
 
@@ -104,8 +97,7 @@ void playGame_Render() {
             uint8_t index = lowerSpark.getImage();
 
             if (static_cast<SparkImage>(index) != SparkImage::None) {
-                Sprites::drawErase(x, y, Images::Spark_Mask, index);
-                Sprites::drawSelfMasked(x, y, Images::Spark, index);
+                Sprites::drawPlusMask(x, y, Images::Spark, index);
             }
 
         }
@@ -119,8 +111,7 @@ void playGame_Render() {
             uint8_t index = upperSpark.getImage();
 
             if (static_cast<SparkImage>(index) != SparkImage::None) {
-                Sprites::drawErase(x, y, Images::Spark_Mask, index);
-                Sprites::drawSelfMasked(x, y, Images::Spark, index);
+                Sprites::drawPlusMask(x, y, Images::Spark, index);
             }
 
         }
@@ -135,8 +126,7 @@ void playGame_Render() {
 
             if (static_cast<BirdImage>(index) != BirdImage::None) {
 
-                Sprites::drawErase(x, y, pgm_read_word_near(&Images::Birds_Mask[index]), 0);
-                Sprites::drawSelfMasked(x, y, pgm_read_word_near(&Images::Birds[index]), 0);
+                Sprites::drawPlusMask(x, y, pgm_read_word_near(&Images::Birds[index]), 0);
 
             }
 
@@ -165,8 +155,7 @@ void playGame_RenderKong(uint8_t yOffset) {
     int8_t y = playGameVars.kong.getYPosition(yOffset);
     KongImage image = playGameVars.kong.getImage();
 
-    Sprites::drawErase(x, y, pgm_read_word_near(&Images::Kong_Mask[static_cast<uint8_t>(image)]), 0);
-    Sprites::drawSelfMasked(x, y, pgm_read_word_near(&Images::Kong[static_cast<uint8_t>(image)]), 0);
+    Sprites::drawPlusMask(x, y, pgm_read_word_near(&Images::Kong[static_cast<uint8_t>(image)]), 0);
     
     const uint8_t xPos[] = { 30, 47, 76, 83 };
     const uint8_t yPos[] = { 6, 11, 11, 6 };
@@ -174,10 +163,7 @@ void playGame_RenderKong(uint8_t yOffset) {
     for (uint8_t i = 0; i < 4 ; i++) {
 
         if (playGameVars.kong.getDisplayChain(i)) {
-
-            Sprites::drawErase(xPos[i], yPos[i] - yOffset, pgm_read_word_near(&Images::Lock_Chains_Mask[i]), 0);
-            Sprites::drawSelfMasked(xPos[i], yPos[i] - yOffset, pgm_read_word_near(&Images::Lock_Chains[i]), 0);
-
+            Sprites::drawPlusMask(xPos[i], yPos[i] - yOffset, pgm_read_word_near(&Images::Lock_Chains[i]), 0);
         }
 
     }
@@ -201,15 +187,13 @@ void playGame_RenderKey(uint8_t yOffset) {
         if (index == NO_IMAGE) {
 
             index = arduboy.getFrameCount() % 59 / 15;
-            Sprites::drawErase(x, y, Images::Key_Spin_Mask, index);
-            Sprites::drawSelfMasked(x, y, Images::Key_Spin, index);
+            Sprites::drawPlusMask(x, y, Images::Key_Spin, index);
 
         }
         else {
 
             if (playGameVars.key.getDisplay()) {
-                Sprites::drawErase(x, y, Images::Key_Rotate_Mask, index);
-                Sprites::drawSelfMasked(x, y, Images::Key_Rotate, index);
+                Sprites::drawPlusMask(x, y, Images::Key_Rotate, index);
             }
 
         }

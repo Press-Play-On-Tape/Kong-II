@@ -8,7 +8,7 @@ int8_t Kong::getXPosition() {
 
     if (!this->enabled) {
 
-        return 52;
+        return 52+1;
 
     }
     else {
